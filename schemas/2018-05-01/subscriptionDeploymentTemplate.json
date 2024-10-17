@@ -651,6 +651,24 @@
               "$ref": "https://schema.management.azure.com/schemas/2022-05-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleDefinitions"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-02-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleAssignmentScheduleRequests"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-02-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleEligibilityScheduleRequests"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-02-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleManagementPolicyAssignments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleAssignmentScheduleRequests"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleEligibilityScheduleRequests"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01-preview/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleManagementPolicyAssignments"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2017-09-01/Microsoft.Authorization.json#/resourceDefinitions/roleAssignments"
             },
             {
@@ -795,6 +813,24 @@
               "$ref": "https://schema.management.azure.com/schemas/2023-04-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-04-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policyDefinitions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policyDefinitions_versions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policySetDefinitions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policySetDefinitions_versions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2018-11-01-preview/Microsoft.Billing.json#/subscription_resourceDefinitions/billingAccounts_lineOfCredit"
             },
             {
@@ -841,6 +877,9 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2023-08-22/Microsoft.Confluent.json#/subscription_resourceDefinitions/agreements"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-02-13/Microsoft.Confluent.json#/subscription_resourceDefinitions/agreements"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2017-12-30-preview/Microsoft.Consumption.json#/subscription_resourceDefinitions/budgets"
@@ -898,6 +937,9 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2023-11-01/Microsoft.Consumption.json#/unknown_resourceDefinitions/budgets"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-08-01/Microsoft.Consumption.json#/unknown_resourceDefinitions/budgets"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2018-05-31/Microsoft.CostManagement.json#/subscription_resourceDefinitions/reportconfigs"
@@ -994,6 +1036,15 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2023-04-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/views"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-07-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/exports"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-07-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/scheduledActions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-07-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/views"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2023-08-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/budgets"
@@ -1108,6 +1159,9 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2023-12-15-preview/Microsoft.EventGrid.json#/unknown_resourceDefinitions/eventSubscriptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-06-01-preview/Microsoft.EventGrid.json#/unknown_resourceDefinitions/eventSubscriptions"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Features.json#/subscription_resourceDefinitions/featureProviders_subscriptionFeatureRegistrations"
@@ -1233,6 +1287,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2023-09-01/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2023-11-01/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-01-01/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-03-01/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2017-09-01-preview/Microsoft.Network.TrafficManager.json#/subscription_resourceDefinitions/trafficManagerUserMetricsKeys"
             },
             {
@@ -1291,6 +1354,12 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2022-09-01/Microsoft.PolicyInsights.json#/subscription_resourceDefinitions/attestations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01/Microsoft.PolicyInsights.json#/subscription_resourceDefinitions/attestations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01/Microsoft.PolicyInsights.json#/subscription_resourceDefinitions/remediations"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2020-11-20/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations"
@@ -1545,6 +1614,30 @@
               "$ref": "https://schema.management.azure.com/schemas/2023-08-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-03-01/Microsoft.Resources.json#/subscription_resourceDefinitions/deployments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-03-01/Microsoft.Resources.json#/subscription_resourceDefinitions/deploymentStacks"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-03-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-03-01/Microsoft.Resources.json#/unknown_resourceDefinitions/tags"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-07-01/Microsoft.Resources.json#/subscription_resourceDefinitions/deployments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-07-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-07-01/Microsoft.Resources.json#/unknown_resourceDefinitions/tags"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-08-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2015-06-01-preview/Microsoft.Security.json#/subscription_resourceDefinitions/locations_applicationWhitelistings"
             },
             {
@@ -1645,6 +1738,9 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2023-05-01/Microsoft.Security.json#/subscription_resourceDefinitions/serverVulnerabilityAssessmentsSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-08-01-preview/Microsoft.Subscription.json#/subscription_resourceDefinitions/changeTenantRequest"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2019-05-01-preview/Microsoft.Support.json#/subscription_resourceDefinitions/supportTickets"

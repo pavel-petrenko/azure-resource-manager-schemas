@@ -330,9 +330,6 @@
           "description": "The tracking data stores."
         }
       },
-      "required": [
-        "trackingDataStores"
-      ],
       "description": "The properties of application."
     },
     "ApplicationResourceProperties": {
@@ -747,12 +744,6 @@
           "description": "The data store URI."
         }
       },
-      "required": [
-        "databaseName",
-        "dataStoreIngestionUri",
-        "dataStoreResourceId",
-        "dataStoreUri"
-      ],
       "description": "The properties of tracking data store."
     }
   }

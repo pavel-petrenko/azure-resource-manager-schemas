@@ -158,7 +158,6 @@
         },
         "userAssignedIdentity": {
           "type": "string",
-          "format": "arm-id",
           "description": "The user assigned identity to be used to grant permissions"
         }
       },

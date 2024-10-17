@@ -697,6 +697,10 @@
     "PolicyAssignmentProperties": {
       "type": "object",
       "properties": {
+        "definitionVersion": {
+          "type": "string",
+          "description": "The version of the policy definition to use."
+        },
         "description": {
           "type": "string",
           "description": "This message will be part of response in case of policy violation."
@@ -890,6 +894,10 @@
     "PolicyDefinitionReference": {
       "type": "object",
       "properties": {
+        "definitionVersion": {
+          "type": "string",
+          "description": "The version of the policy definition to use."
+        },
         "groupNames": {
           "oneOf": [
             {

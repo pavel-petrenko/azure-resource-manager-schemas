@@ -10592,6 +10592,17 @@
           ],
           "description": "<code>true</code> if the app is enabled; otherwise, <code>false</code>. Setting this value to false disables the app (takes the app offline)."
         },
+        "endToEndEncryptionEnabled": {
+          "oneOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Whether to use end to end encryption between the FrontEnd and the Worker"
+        },
         "hostingEnvironmentProfile": {
           "oneOf": [
             {
