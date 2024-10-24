@@ -1,0 +1,132 @@
+{
+  "id": "https://schema.management.azure.com/schemas/2024-08-01/Microsoft.Resources.json#",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Microsoft.Resources",
+  "description": "Microsoft Resources Resource Types",
+  "resourceDefinitions": {},
+  "tenant_resourceDefinitions": {
+    "dataBoundaries": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2024-08-01"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "enum": [
+            "default"
+          ],
+          "description": "Default string modeled as parameter for auto generation to work correctly."
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "$ref": "#/definitions/DataBoundaryProperties"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "Data boundary properties"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Resources/dataBoundaries"
+          ]
+        }
+      },
+      "required": [
+        "apiVersion",
+        "name",
+        "properties",
+        "type"
+      ],
+      "description": "Microsoft.Resources/dataBoundaries"
+    }
+  },
+  "definitions": {
+    "DataBoundaryProperties": {
+      "type": "object",
+      "properties": {
+        "dataBoundary": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "NotDefined",
+                "Global",
+                "EU"
+              ]
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The data boundary definition."
+        }
+      },
+      "description": "Data boundary properties"
+    }
+  },
+  "subscription_resourceDefinitions": {
+    "resourceGroups": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^[-\\w\\._\\(\\)]+$",
+              "maxLength": 90,
+              "description": "the resource group name"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "Microsoft.Resources/resourceGroups"
+          ]
+        },
+        "apiVersion": {
+          "type": "string",
+          "enum": [
+            "2024-08-01"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "the resource group location"
+        },
+        "tags": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              }
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ],
+          "description": "The resource group tags."
+        }
+      },
+      "required": [
+        "name",
+        "type",
+        "apiVersion",
+        "location"
+      ],
+      "description": "Microsoft.Resources/resourceGroups"
+    }
+  }
+}
