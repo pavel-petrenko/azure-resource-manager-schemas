@@ -540,6 +540,33 @@
               "$ref": "https://schema.management.azure.com/schemas/2023-01-01/Microsoft.Advisor.json#/unknown_resourceDefinitions/recommendations_suppressions"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2023-09-01-preview/Microsoft.Advisor.json#/subscription_resourceDefinitions/assessments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-09-01-preview/Microsoft.Advisor.json#/subscription_resourceDefinitions/configurations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-09-01-preview/Microsoft.Advisor.json#/unknown_resourceDefinitions/recommendations_suppressions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-11-18-preview/Microsoft.Advisor.json#/subscription_resourceDefinitions/assessments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-11-18-preview/Microsoft.Advisor.json#/subscription_resourceDefinitions/configurations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-11-18-preview/Microsoft.Advisor.json#/unknown_resourceDefinitions/recommendations_suppressions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-01-01/Microsoft.Advisor.json#/subscription_resourceDefinitions/configurations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-01-01/Microsoft.Advisor.json#/unknown_resourceDefinitions/recommendations_suppressions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01-preview/Microsoft.AlertsManagement.json#/unknown_resourceDefinitions/issues"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2015-07-01/Microsoft.Authorization.Authz.json#/unknown_resourceDefinitions/roleAssignments"
             },
             {
@@ -828,6 +855,15 @@
               "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-12-01-preview/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/variables"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-12-01-preview/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/variables_values"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-12-01-preview/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyExemptions"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2025-01-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policyDefinitions"
             },
             {
@@ -841,6 +877,21 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2025-01-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policyDefinitions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policyDefinitions_versions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policySetDefinitions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Authorization.Resources.json#/subscription_resourceDefinitions/policySetDefinitions_versions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Authorization.Resources.json#/unknown_resourceDefinitions/policyAssignments"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2024-12-01/Microsoft.AwsConnector.json#/unknown_resourceDefinitions/ec2Instances"
@@ -1173,6 +1224,36 @@
               "$ref": "https://schema.management.azure.com/schemas/2024-08-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/views"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/budgets"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/exports"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/scheduledActions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/settings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Microsoft.CostManagement.json#/unknown_resourceDefinitions/views"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/budgets"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/exports"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/scheduledActions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/settings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.CostManagement.json#/unknown_resourceDefinitions/views"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2020-02-01-preview/Microsoft.Datadog.json#/subscription_resourceDefinitions/agreements"
             },
             {
@@ -1255,6 +1336,9 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2025-02-15/Microsoft.EventGrid.json#/unknown_resourceDefinitions/eventSubscriptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-04-01-preview/Microsoft.EventGrid.json#/unknown_resourceDefinitions/eventSubscriptions"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2021-07-01/Microsoft.Features.json#/subscription_resourceDefinitions/featureProviders_subscriptionFeatureRegistrations"
@@ -1416,6 +1500,12 @@
               "$ref": "https://schema.management.azure.com/schemas/2023-12-01-preview/Microsoft.LoadTestService.json#/unknown_resourceDefinitions/loadTestProfileMappings"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-12-01-preview/Microsoft.LoadTestService.json#/unknown_resourceDefinitions/loadTestMappings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-12-01-preview/Microsoft.LoadTestService.json#/unknown_resourceDefinitions/loadTestProfileMappings"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2023-04-01/Microsoft.Maintenance.json#/subscription_resourceDefinitions/configurationAssignments"
             },
             {
@@ -1479,21 +1569,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2021-01-01/Microsoft.MarketplaceOrdering.json#/subscription_resourceDefinitions/offerTypes_publishers_offers_plans_agreements"
             },
             {
-              "$ref": "https://schema.management.azure.com/schemas/2018-03-30-preview/Microsoft.Media.json#/subscription_resourceDefinitions/mediaservices"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2018-06-01-preview/Microsoft.Media.json#/subscription_resourceDefinitions/mediaservices"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2018-07-01/Microsoft.Media.json#/subscription_resourceDefinitions/mediaservices"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2019-05-01-preview/Microsoft.Media.json#/subscription_resourceDefinitions/mediaservices"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/2020-05-01/Microsoft.Media.json#/subscription_resourceDefinitions/mediaservices"
-            },
-            {
               "$ref": "https://schema.management.azure.com/schemas/2021-05-01-preview/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
             },
             {
@@ -1545,6 +1620,9 @@
               "$ref": "https://schema.management.azure.com/schemas/2024-05-01/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-07-01/Microsoft.Network.NRP.json#/subscription_resourceDefinitions/networkManagerConnections"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2018-04-01/Microsoft.Network.TrafficManager.json#/subscription_resourceDefinitions/trafficManagerUserMetricsKeys"
             },
             {
@@ -1585,6 +1663,9 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2022-10-01/Microsoft.Peering.json#/subscription_resourceDefinitions/peerAsns"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-05-01/Microsoft.Peering.json#/subscription_resourceDefinitions/peerAsns"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2018-07-01-preview/Microsoft.PolicyInsights.json#/unknown_resourceDefinitions/remediations"
@@ -1726,6 +1807,48 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2021-09-01-preview/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_resourcetypeRegistrations_skus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_authorizedApplications"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_customRollouts"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_defaultRollouts"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_newRegionFrontloadRelease"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_notificationRegistrations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_operations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_resourcetypeRegistrations"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_skus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_skus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_resourcetypeRegistrations_resourcetypeRegistrations_skus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-09-01/Microsoft.ProviderHub.json#/subscription_resourceDefinitions/providerRegistrations_resourcetypeRegistrations_skus"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-09-01-preview/Microsoft.Relationships.json#/unknown_resourceDefinitions/dependencyOf"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2023-09-01-preview/Microsoft.Relationships.json#/unknown_resourceDefinitions/serviceGroupMember"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2015-11-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
@@ -1932,6 +2055,24 @@
               "$ref": "https://schema.management.azure.com/schemas/2024-11-01/Microsoft.Resources.json#/unknown_resourceDefinitions/tags"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Resources.json#/unknown_resourceDefinitions/deployments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Microsoft.Resources.json#/unknown_resourceDefinitions/tags"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-04-01/Microsoft.Resources.json#/subscription_resourceDefinitions/resourceGroups"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-04-01/Microsoft.Resources.json#/unknown_resourceDefinitions/deployments"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-04-01/Microsoft.Resources.json#/unknown_resourceDefinitions/tags"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2023-04-01-preview/Microsoft.ScVmm.json#/unknown_resourceDefinitions/virtualMachineInstances"
             },
             {
@@ -1948,6 +2089,12 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2024-06-01/Microsoft.ScVmm.json#/unknown_resourceDefinitions/virtualMachineInstances_guestAgents"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-13/Microsoft.ScVmm.json#/unknown_resourceDefinitions/virtualMachineInstances"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-13/Microsoft.ScVmm.json#/unknown_resourceDefinitions/virtualMachineInstances_guestAgents"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2017-08-01-preview/Microsoft.Security.json#/subscription_resourceDefinitions/autoProvisioningSettings"
@@ -2055,7 +2202,13 @@
               "$ref": "https://schema.management.azure.com/schemas/2024-08-01/Microsoft.Security.json#/unknown_resourceDefinitions/standardAssignments"
             },
             {
+              "$ref": "https://schema.management.azure.com/schemas/2024-08-01-preview/Microsoft.Security.json#/unknown_resourceDefinitions/defenderForStorageSettings"
+            },
+            {
               "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Microsoft.Security.json#/unknown_resourceDefinitions/defenderForStorageSettings"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-01-01/Microsoft.Security.json#/unknown_resourceDefinitions/defenderForStorageSettings"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2024-08-01-preview/Microsoft.Subscription.json#/subscription_resourceDefinitions/changeTenantRequest"
@@ -2112,9 +2265,6 @@
               "$ref": "https://schema.management.azure.com/schemas/2023-09-01/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
             },
             {
-              "$ref": "https://schema.management.azure.com/schemas/2023-09-01-preview/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
-            },
-            {
               "$ref": "https://schema.management.azure.com/schemas/2024-06-01/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
             },
             {
@@ -2125,6 +2275,15 @@
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/2024-10-01-preview/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2024-12-01-preview/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-01-01-preview/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/2025-03-01/Oracle.Database.json#/subscription_resourceDefinitions/oracleSubscriptions"
             }
           ]
         }

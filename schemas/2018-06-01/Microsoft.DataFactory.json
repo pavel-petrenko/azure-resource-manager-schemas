@@ -1508,6 +1508,55 @@
           "type": "object"
         },
         {
+          "description": "Databricks Job activity.",
+          "properties": {
+            "linkedServiceName": {
+              "description": "Linked service reference.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/LinkedServiceReference"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "policy": {
+              "description": "Activity policy.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/ActivityPolicy"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "type": {
+              "enum": [
+                "DatabricksJob"
+              ],
+              "type": "string"
+            },
+            "typeProperties": {
+              "description": "Databricks Job activity properties.",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/DatabricksJobActivityTypeProperties"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            }
+          },
+          "required": [
+            "typeProperties",
+            "type"
+          ],
+          "type": "object"
+        },
+        {
           "description": "DatabricksNotebook activity.",
           "properties": {
             "linkedServiceName": {
@@ -2737,8 +2786,55 @@
     "AmazonRdsForLinkedServiceTypeProperties": {
       "description": "AmazonRdsForOracle database linked service properties.",
       "properties": {
+        "authenticationType": {
+          "description": "Authentication type for connecting to the AmazonRdsForOracle database. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "enum": [
+                "Basic"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "connectionString": {
-          "description": "The connection string. Type: string, SecureString or AzureKeyVaultSecretReference.",
+          "description": "The connection string. Type: string, SecureString or AzureKeyVaultSecretReference. Only used for Version 1.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cryptoChecksumClient": {
+          "description": "Specifies the desired data integrity behavior when this client connects to a server. Supported values are accepted, rejected, requested or required, default value is required. Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "cryptoChecksumTypesClient": {
+          "description": "Specifies the crypto-checksum algorithms that client can use. Supported values are SHA1, SHA256, SHA384, SHA512, default value is (SHA512). Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enableBulkLoad": {
+          "description": "Specifies whether to use bulk copy or batch insert when loading data into the database, default value is true. Type: boolean. Only used for Version 2.0.",
           "oneOf": [
             {
               "type": "object"
@@ -2752,6 +2848,72 @@
           "description": "The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string.",
           "type": "string"
         },
+        "encryptionClient": {
+          "description": "Specifies the encryption client behavior. Supported values are accepted, rejected, requested or required, default value is required. Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "encryptionTypesClient": {
+          "description": "Specifies the encryption algorithms that client can use. Supported values are AES128, AES192, AES256, 3DES112, 3DES168, default value is (AES256). Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "fetchSize": {
+          "description": "Specifies the number of bytes that the driver allocates to fetch the data in one database round-trip, default value is 10485760. Type: integer. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "fetchTswtzAsTimestamp": {
+          "description": "Specifies whether the driver returns column value with the TIMESTAMP WITH TIME ZONE data type as DateTime or string. This setting is ignored if supportV1DataTypes is not true, default value is true. Type: boolean. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "initialLobFetchSize": {
+          "description": "Specifies the amount that the source initially fetches for LOB columns, default value is 0. Type: integer. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "initializationString": {
+          "description": "Specifies a command that is issued immediately after connecting to the database to manage session settings. Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "password": {
           "description": "The Azure key vault secret reference of password in connection string.",
           "oneOf": [
@@ -2762,11 +2924,52 @@
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
             }
           ]
+        },
+        "server": {
+          "description": "The location of AmazonRdsForOracle database you want to connect to, the supported forms include connector descriptor, Easy Connect (Plus) Naming and Oracle Net Services Name (Only self-hosted IR). Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "statementCacheSize": {
+          "description": "Specifies the number of cursors or statements to be cached for each database connection, default value is 0. Type: integer. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "supportV1DataTypes": {
+          "description": "Specifies whether to use the Version 1.0 data type mappings. Do not set this to true unless you want to keep backward compatibility with Version 1.0's data type mappings, default value is false. Type: boolean. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "username": {
+          "description": "The AmazonRdsForOracle database username. Type: string. Only used for Version 2.0.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
         }
       },
-      "required": [
-        "connectionString"
-      ],
       "type": "object"
     },
     "AmazonRdsForOraclePartitionSettings": {
@@ -4780,6 +4983,17 @@
             }
           ]
         },
+        "dataSecurityMode": {
+          "description": "The data security mode for the Databricks Cluster. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "domain": {
           "description": "<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).",
           "oneOf": [
@@ -6040,6 +6254,23 @@
         },
         "username": {
           "description": "Username for authentication. Type: string.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "AzurePostgreSqlSinkUpsertSettings": {
+      "description": "Azure Database for PostgreSQL upsert option settings",
+      "properties": {
+        "keys": {
+          "description": "Key column names for unique row identification. Type: array of strings (or Expression with resultType array of strings).",
           "oneOf": [
             {
               "type": "object"
@@ -8852,7 +9083,7 @@
           "type": "object"
         },
         {
-          "description": "A copy activity Azure PostgreSQL sink.",
+          "description": "A copy activity Azure Database for PostgreSQL sink.",
           "properties": {
             "preCopyScript": {
               "description": "A query to execute before starting the copy. Type: string (or Expression with resultType string).",
@@ -8870,6 +9101,33 @@
                 "AzurePostgreSqlSink"
               ],
               "type": "string"
+            },
+            "upsertSettings": {
+              "description": "Azure Database for PostgreSQL upsert option settings",
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/AzurePostgreSqlSinkUpsertSettings"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "writeMethod": {
+              "description": "The write behavior for the operation. Default is Bulk Insert.",
+              "oneOf": [
+                {
+                  "enum": [
+                    "BulkInsert",
+                    "CopyCommand",
+                    "Upsert"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
             }
           },
           "required": [
@@ -9208,6 +9466,28 @@
                 }
               ]
             },
+            "bypassBusinessLogicExecution": {
+              "description": "Controls the bypass of Dataverse custom business logic. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).",
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "bypassPowerAutomateFlows": {
+              "description": "Controls the bypass of Power Automate flows. Default is false. Type: boolean (or Expression with resultType boolean).",
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
             "ignoreNullValues": {
               "description": "The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).",
               "oneOf": [
@@ -9386,6 +9666,28 @@
                 }
               ]
             },
+            "bypassBusinessLogicExecution": {
+              "description": "Controls the bypass of Dataverse custom business logic. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).",
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "bypassPowerAutomateFlows": {
+              "description": "Controls the bypass of Power Automate flows. Default is false. Type: boolean (or Expression with resultType boolean).",
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
             "ignoreNullValues": {
               "description": "The flag indicating whether to ignore null values from input dataset (except key fields) during write operation. Default is false. Type: boolean (or Expression with resultType boolean).",
               "oneOf": [
@@ -9429,6 +9731,28 @@
           "properties": {
             "alternateKeyName": {
               "description": "The logical name of the alternate key which will be used when upserting records. Type: string (or Expression with resultType string).",
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "bypassBusinessLogicExecution": {
+              "description": "Controls the bypass of Dataverse custom business logic. Type: string (or Expression with resultType string). Type: string (or Expression with resultType string).",
+              "oneOf": [
+                {
+                  "type": "object"
+                },
+                {
+                  "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+                }
+              ]
+            },
+            "bypassPowerAutomateFlows": {
+              "description": "Controls the bypass of Power Automate flows. Default is false. Type: boolean (or Expression with resultType boolean).",
               "oneOf": [
                 {
                   "type": "object"
@@ -11479,7 +11803,7 @@
           "type": "object"
         },
         {
-          "description": "A copy activity Azure PostgreSQL source.",
+          "description": "A copy activity Azure Database for PostgreSQL source.",
           "properties": {
             "additionalColumns": {
               "description": "Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).",
@@ -17875,6 +18199,41 @@
       },
       "type": "object"
     },
+    "DatabricksJobActivityTypeProperties": {
+      "description": "Databricks Job activity properties.",
+      "properties": {
+        "jobId": {
+          "description": "The Id of the Databricks Job to be executed. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "jobParameters": {
+          "description": "Job parameters to be used for each run of this job. If the job takes a parameter that is not specified, the default value from the job will be used.",
+          "oneOf": [
+            {
+              "additionalProperties": {
+                "type": "object"
+              },
+              "properties": {},
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "required": [
+        "jobId"
+      ],
+      "type": "object"
+    },
     "DatabricksNotebookActivityTypeProperties": {
       "description": "Databricks Notebook activity properties.",
       "properties": {
@@ -20379,7 +20738,7 @@
               "description": "Properties specific to this dataset type.",
               "oneOf": [
                 {
-                  "$ref": "#/definitions/GenericDatasetTypeProperties"
+                  "$ref": "#/definitions/ServiceNowV2DatasetTypeProperties"
                 },
                 {
                   "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
@@ -23592,8 +23951,15 @@
           ]
         },
         "value": {
-          "description": "Value for Constant/Field Type: string.",
-          "type": "string"
+          "description": "Value for Constant/Field Type: object.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
         }
       },
       "type": "object"
@@ -25201,17 +25567,6 @@
             }
           ]
         },
-        "password": {
-          "description": "The Azure key vault secret reference of password in connection string. Type: string. Only used for V2.",
-          "oneOf": [
-            {
-              "$ref": "#/definitions/SecretBase"
-            },
-            {
-              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
-            }
-          ]
-        },
         "port": {
           "description": "The port for the connection. Type: integer. Only used for V2.",
           "oneOf": [
@@ -26585,6 +26940,17 @@
             }
           ]
         },
+        "enableServerCertificateValidation": {
+          "description": "Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "enableSsl": {
           "description": "Specifies whether the connections to the server are encrypted using SSL. The default value is false.",
           "oneOf": [
@@ -27190,6 +27556,17 @@
             }
           ]
         },
+        "enableServerCertificateValidation": {
+          "description": "Specify whether to enable server SSL certificate validation when you connect.Always use System Trust Store (for V2 only). The default value is true.",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "enableSsl": {
           "description": "Specifies whether the connections to the server are encrypted using SSL. The default value is false.",
           "oneOf": [
@@ -27232,6 +27609,21 @@
           "oneOf": [
             {
               "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "thriftTransportProtocol": {
+          "description": "The transport protocol to use in the Thrift layer (for V2 only). Default value is Binary.",
+          "oneOf": [
+            {
+              "enum": [
+                "Binary",
+                "HTTP"
+              ],
+              "type": "string"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
@@ -28404,7 +28796,7 @@
           "type": "object"
         },
         {
-          "description": "AmazonRdsForOracle database.",
+          "description": "AmazonRdsForOracle database. This linked service has supported version property. The Version 1.0 is scheduled for deprecation while your pipeline will continue to run after EOL but without any bug fix or new features.",
           "properties": {
             "type": {
               "enum": [
@@ -30618,7 +31010,7 @@
           "type": "object"
         },
         {
-          "description": "Presto server linked service.",
+          "description": "Presto server linked service. This linked service has supported version property. The Version 1.0 is scheduled for deprecation while your pipeline will continue to run after EOL but without any bug fix or new features.",
           "properties": {
             "type": {
               "enum": [
@@ -30645,7 +31037,7 @@
           "type": "object"
         },
         {
-          "description": "QuickBooks server linked service.",
+          "description": "QuickBooks server linked service. This linked service has supported version property. The Version 1.0 is scheduled for deprecation while your pipeline will continue to run after EOL but without any bug fix or new features.",
           "properties": {
             "type": {
               "enum": [
@@ -33897,6 +34289,39 @@
             }
           ]
         },
+        "servicePrincipalCredentialType": {
+          "description": "The service principal credential type for authentication.'ServicePrincipalKey' for key/secret, 'ServicePrincipalCert' for certificate. If not specified, 'ServicePrincipalKey' is in use. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "servicePrincipalEmbeddedCert": {
+          "description": "Specify the base64 encoded certificate of your application registered in Azure Active Directory. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SecretBase"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "servicePrincipalEmbeddedCertPassword": {
+          "description": "Specify the password of your certificate if your certificate has a password and you are using AadServicePrincipal authentication. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SecretBase"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "servicePrincipalId": {
           "description": "Specify the application's client ID. Type: string (or Expression with resultType string).",
           "oneOf": [
@@ -34169,9 +34594,6 @@
           ]
         }
       },
-      "required": [
-        "connectionString"
-      ],
       "type": "object"
     },
     "OraclePartitionSettings": {
@@ -35729,7 +36151,7 @@
       "description": "Presto server linked service properties.",
       "properties": {
         "allowHostNameCNMismatch": {
-          "description": "Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false.",
+          "description": "Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false. Only used for Version 1.0.",
           "oneOf": [
             {
               "type": "object"
@@ -35740,7 +36162,7 @@
           ]
         },
         "allowSelfSignedServerCert": {
-          "description": "Specifies whether to allow self-signed certificates from the server. The default value is false.",
+          "description": "Specifies whether to allow self-signed certificates from the server. The default value is false. Only used for Version 1.0.",
           "oneOf": [
             {
               "type": "object"
@@ -35776,8 +36198,19 @@
             }
           ]
         },
+        "enableServerCertificateValidation": {
+          "description": "Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "enableSsl": {
-          "description": "Specifies whether the connections to the server are encrypted using SSL. The default value is false.",
+          "description": "Specifies whether the connections to the server are encrypted using SSL. The default value for legacy version is False. The default value for version 2.0 is True.",
           "oneOf": [
             {
               "type": "object"
@@ -35814,7 +36247,7 @@
           ]
         },
         "port": {
-          "description": "The TCP port that the Presto server uses to listen for client connections. The default value is 8080.",
+          "description": "The TCP port that the Presto server uses to listen for client connections. The default value is 8080 when disable SSL, default value is 443 when enable SSL.",
           "oneOf": [
             {
               "type": "object"
@@ -35825,7 +36258,7 @@
           ]
         },
         "serverVersion": {
-          "description": "The version of the Presto server. (i.e. 0.148-t)",
+          "description": "The version of the Presto server. (i.e. 0.148-t) Only used for Version 1.0.",
           "oneOf": [
             {
               "type": "object"
@@ -35836,7 +36269,7 @@
           ]
         },
         "timeZoneID": {
-          "description": "The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone.",
+          "description": "The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value for Version 1.0 is the client system time zone. The default value for Version 2.0 is server system timeZone",
           "oneOf": [
             {
               "type": "object"
@@ -35847,7 +36280,7 @@
           ]
         },
         "trustedCertPath": {
-          "description": "The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.",
+          "description": "The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Only used for Version 1.0.",
           "oneOf": [
             {
               "type": "object"
@@ -35858,7 +36291,7 @@
           ]
         },
         "useSystemTrustStore": {
-          "description": "Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.",
+          "description": "Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Only used for Version 1.0.",
           "oneOf": [
             {
               "type": "object"
@@ -35882,7 +36315,6 @@
       },
       "required": [
         "host",
-        "serverVersion",
         "catalog",
         "authenticationType"
       ],
@@ -35958,7 +36390,7 @@
       "description": "QuickBooks server linked service properties.",
       "properties": {
         "accessToken": {
-          "description": "The access token for OAuth 1.0 authentication.",
+          "description": "The access token for OAuth 2.0 authentication.",
           "oneOf": [
             {
               "$ref": "#/definitions/SecretBase"
@@ -35969,7 +36401,7 @@
           ]
         },
         "accessTokenSecret": {
-          "description": "The access token secret for OAuth 1.0 authentication.",
+          "description": "The access token secret is deprecated for OAuth 1.0 authentication. Only used for version 1.0.",
           "oneOf": [
             {
               "$ref": "#/definitions/SecretBase"
@@ -36002,7 +36434,7 @@
           ]
         },
         "consumerKey": {
-          "description": "The consumer key for OAuth 1.0 authentication.",
+          "description": "The consumer key for OAuth 2.0 authentication.",
           "oneOf": [
             {
               "type": "object"
@@ -36013,7 +36445,7 @@
           ]
         },
         "consumerSecret": {
-          "description": "The consumer secret for OAuth 1.0 authentication.",
+          "description": "The consumer secret for OAuth 2.0 authentication.",
           "oneOf": [
             {
               "$ref": "#/definitions/SecretBase"
@@ -36038,8 +36470,19 @@
             }
           ]
         },
+        "refreshToken": {
+          "description": "The refresh token for OAuth 2.0 authentication.",
+          "oneOf": [
+            {
+              "$ref": "#/definitions/SecretBase"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
         "useEncryptedEndpoints": {
-          "description": "Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true.",
+          "description": "Specifies whether the data source endpoints are encrypted using HTTPS. The default value is true. Only used for version 1.0.",
           "oneOf": [
             {
               "type": "object"
@@ -38783,6 +39226,38 @@
       ],
       "type": "object"
     },
+    "ServiceNowV2DatasetTypeProperties": {
+      "description": "Properties specific to this dataset type.",
+      "properties": {
+        "tableName": {
+          "description": "The table name. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "valueType": {
+          "description": "Type of value copied from source.",
+          "oneOf": [
+            {
+              "enum": [
+                "actual",
+                "display"
+              ],
+              "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        }
+      },
+      "type": "object"
+    },
     "ServiceNowV2LinkedServiceTypeProperties": {
       "description": "ServiceNowV2 server linked service properties.",
       "properties": {
@@ -39565,7 +40040,7 @@
           "type": "string"
         },
         "host": {
-          "description": "The host name of the Snowflake account.",
+          "description": "The host name of the Snowflake account. Type: string (or Expression with resultType string).",
           "oneOf": [
             {
               "type": "object"
@@ -39602,6 +40077,28 @@
           "oneOf": [
             {
               "$ref": "#/definitions/SecretBase"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "role": {
+          "description": "The default access control role to use in the Snowflake session. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "type": "object"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "schema": {
+          "description": "Schema name for connection. Type: string (or Expression with resultType string).",
+          "oneOf": [
+            {
+              "type": "object"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
@@ -39770,6 +40267,17 @@
                 "WindowsAzureHDInsightService"
               ],
               "type": "string"
+            },
+            {
+              "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
+            }
+          ]
+        },
+        "enableServerCertificateValidation": {
+          "description": "Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0",
+          "oneOf": [
+            {
+              "type": "object"
             },
             {
               "$ref": "https://schema.management.azure.com/schemas/common/definitions.json#/definitions/expression"
